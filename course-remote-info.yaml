@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/209958/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Thu, 01 Jan 1970 00:00:00 UTC
+update_date: Sun, 20 Dec 2020 21:51:48 UTC
 stages:
 - id: 287
   step: 5429
@@ -86,6 +86,8 @@ topics:
   2:
   - title: Introduction to OOP
     theory_id: 3614
+  - title: Write, compile, and run
+    theory_id: 3739
   - title: Switch statement
     theory_id: 3504
   - title: Declaring a method
@@ -94,8 +96,6 @@ topics:
     theory_id: 3489
   - title: Functional decomposition
     theory_id: 10570
-  - title: Write, compile, and run
-    theory_id: 3739
   - title: Defining classes
     theory_id: 3618
   - title: Objects
