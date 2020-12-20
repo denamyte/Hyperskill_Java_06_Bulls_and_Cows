@@ -17,7 +17,7 @@ public class Main {
                     .append(answer)
                     .append("\nGrade: ")
                     .append(bulls)
-                    .append(Mammal.getAndOrNone(bulls, cows))
+                    .append(Mammal.getAndOrNoneOrEmpty(bulls, cows))
                     .append(cows)
                     .append('.')
                     .toString();
@@ -41,8 +41,10 @@ public class Main {
             return count > 0 ? String.format("%d %s%s", count, name, getEnding()) : "";
         }
 
-        static String getAndOrNone(Mammal m1, Mammal m2) {
-            return m1.count > 0 && m2.count > 0 ? " and " : "None";
+        static String getAndOrNoneOrEmpty(Mammal m1, Mammal m2) {
+            return m1.count > 0 && m2.count > 0 ? " and "
+                    : m1.count == 0 && m2.count == 0 ? "None"
+                    : "";
         }
     }
 
