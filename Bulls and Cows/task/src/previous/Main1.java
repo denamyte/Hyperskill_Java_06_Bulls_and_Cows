@@ -1,10 +1,10 @@
-package bullscows;
+package previous;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class Main {
+public class Main1 {
 
     static class BullsCows {
 
