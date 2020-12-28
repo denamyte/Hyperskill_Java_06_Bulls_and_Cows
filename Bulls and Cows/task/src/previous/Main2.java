@@ -1,11 +1,11 @@
-package bullscows;
+package previous;
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
-public class Main {
+public class Main2 {
 
     /** This is a completely solved puzzle (was solved on Stage 1),
      * improved and reduced to comply the Stage 2 objective. */
