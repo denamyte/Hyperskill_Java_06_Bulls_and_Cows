@@ -1,9 +1,9 @@
-package bullscows;
+package previous;
 
 import java.util.*;
 import java.util.stream.Stream;
 
-public class Main {
+public class Main4 {
 
     static class BullsCows {
 
@@ -33,10 +33,10 @@ public class Main {
         }
 
         public static char[] generateSecret(int count) {
-            ArrayList<String> digits = new ArrayList<>(Arrays.asList("0123456789".split("")));
-            while (digits.get(0).equals("0")) {
-                Collections.shuffle(digits);
-            }
+            ArrayList<String> digits = new ArrayList<>(Arrays.asList("123456789".split("")));
+            Collections.shuffle(digits);
+            int index = 1 | (int) (System.nanoTime() % 10);  // Generating a random number in range [1..10)
+            digits.add(index, "0");
             return String.join("", digits.subList(0, count)).toCharArray();
         }
 
@@ -54,7 +54,7 @@ public class Main {
         private String currentStats() {
             return moveNumber == 1
                     ? "Okay, let's start a game!"
-                    : "Grade: " + bulls + Counter.getConnective(bulls, cows) + cows;
+                    : "Grade: " + bulls + Counter.getAndOrNoneOrEmpty(bulls, cows) + cows;
         }
 
         private void compare(String answer) {
@@ -98,9 +98,9 @@ public class Main {
         }
 
         /** Some special tricks for the log. */
-        static String getConnective(Counter c1, Counter c2) {
-            return c1.count > 0 && c2.count > 0 ? " and "
-                    : c1.count == 0 && c2.count == 0 ? "None"
+        static String getAndOrNoneOrEmpty(Counter m1, Counter m2) {
+            return m1.count > 0 && m2.count > 0 ? " and "
+                    : m1.count == 0 && m2.count == 0 ? "None"
                     : "";
         }
     }
